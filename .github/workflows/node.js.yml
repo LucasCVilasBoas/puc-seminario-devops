@@ -37,3 +37,17 @@ jobs:
         git config --global user.email "g.policarto@gmail.com"
         git config --global user.name "Pipe"
         npm version patch
+  
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Release
+      run: |
+        echo "Simulando um deploy em produção..."
+        echo "Publicando..."
+        sleep 5
+        echo "Iniciando servidor..."
+        sleep 2
+        echo "Versão publicada."
