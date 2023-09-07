@@ -23,11 +23,18 @@ jobs:
 
     - name: Executar testes Jest
       run: npm test
+    
+    - name: Fazer build da nova versão
+      run: npm version patch
 
-    - name: Publicar resultados dos testes
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: ./docs-testes
+    - name: Atualizar arquivo README
+      run: |
+        new_version=$(npm version ls --json | jq -r .your-package-name.version)
+        sed -i '' "s/Version: .*/Version: $new_version/" README.md
 
+    - name: Commit e push versão atualizada
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git commit -am "Atualizar versão no README para $new_version"
+        git push
