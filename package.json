@@ -1,5 +1,14 @@
 {
-    "scripts": {
-        "test": "jest"
-    }
+  "name": "pucdevops",
+  "version": "1.0.0",
+  "description": "Projeto exemplo de uso do Jest.",
+  "main": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Cláudia, Eduardo, Guilherme e Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
 }
