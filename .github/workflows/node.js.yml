@@ -25,6 +25,9 @@ jobs:
       run: npm test
   
   docs:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Fazer build da nova versão
       run: |
         git config user.name "GitHub Actions"
