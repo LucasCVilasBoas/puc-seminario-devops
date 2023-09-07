@@ -15,13 +15,3 @@ function classify_egg(egg_mass) {
 };
 
 module.exports = classify_egg;
-
-
-/*
-let values = [10, 48, 52, 58, 62, 68]
-
-
-values.forEach(function (e) {
-  console.log(classify_egg(e));
-});
-*/
