@@ -32,8 +32,8 @@ jobs:
 
     - name: Atualizar arquivo README
       run: |
-        new_version=$(npm version)
-        sed -i '' "s/Version: .*/Version: $new_version/" README.md
+        new_version=$(npm version --json | grep -e pucdevops.*)
+        sed -i '' "s/Version: .*/Version: $new_version/" $GITHUB_WORKSPACE/README.md
 
     - name: Commit e push versão atualizada
       run: |
