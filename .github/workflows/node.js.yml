@@ -24,27 +24,12 @@ jobs:
     - name: Executar testes Jest
       run: npm test
   
-  docs:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout código-fonte
       uses: actions/checkout@v2
-      
+
     - name: Fazer build da nova versão
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
-        npm version patch
-
-    - name: Atualizar arquivo README
-      run: |
-        new_version=$(npm version --json | grep -e pucdevops.*)
-        echo "Version: $new_version" > $GITHUB_WORKSPACE/last-version-prod.md
-
-    - name: Commit e push versão atualizada
-      run: |
-        git status
-        git add .
-        git commit -am "Atualizar versão no README"
-        git push
+      run:  npm version patch
