@@ -32,7 +32,7 @@ jobs:
 
     - name: Atualizar arquivo README
       run: |
-        new_version=$(npm version ls)
+        new_version=$(npm version)
         sed -i '' "s/Version: .*/Version: $new_version/" README.md
 
     - name: Commit e push versão atualizada
