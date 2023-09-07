@@ -25,7 +25,10 @@ jobs:
       run: npm test
     
     - name: Fazer build da nova versão
-      run: npm version patch
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        npm version patch
 
     - name: Atualizar arquivo README
       run: |
@@ -34,7 +37,5 @@ jobs:
 
     - name: Commit e push versão atualizada
       run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
         git commit -am "Atualizar versão no README para $new_version"
         git push
