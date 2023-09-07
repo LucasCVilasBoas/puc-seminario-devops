@@ -48,7 +48,7 @@ jobs:
     - name: Release
       run: |
         sleep 1
-        cecho "Simulando um deploy em produção..."
+        echo "Simulando um deploy em produção..."
         sleep 2
         echo "Publicando..."
         sleep 5
