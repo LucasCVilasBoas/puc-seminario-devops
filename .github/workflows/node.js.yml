@@ -33,6 +33,6 @@ jobs:
 
     - name: Fazer build da nova versão
       run: |
-        - git config --global user.email "g.policarto@gmail.com"
-        - git config --global user.name "Pipe"
-        - npm version patch
+        git config --global user.email "g.policarto@gmail.com"
+        git config --global user.name "Pipe"
+        npm version patch
