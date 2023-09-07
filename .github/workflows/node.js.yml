@@ -28,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout código-fonte
+      uses: actions/checkout@v2
+      
     - name: Fazer build da nova versão
       run: |
         git config user.name "GitHub Actions"
