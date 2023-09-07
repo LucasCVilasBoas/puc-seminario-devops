@@ -23,7 +23,8 @@ jobs:
 
     - name: Executar testes Jest
       run: npm test
-    
+  
+  docs:
     - name: Fazer build da nova versão
       run: |
         git config user.name "GitHub Actions"
