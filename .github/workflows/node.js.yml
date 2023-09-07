@@ -37,5 +37,5 @@ jobs:
 
     - name: Commit e push versão atualizada
       run: |
-        git commit -am "Atualizar versão no README para $new_version"
+        git commit -am "Atualizar versão no README"
         git push
