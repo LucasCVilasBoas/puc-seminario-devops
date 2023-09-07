@@ -2,6 +2,7 @@ const classify_egg = require('./classify_egg');
 
 
 test('Ovo com menos de 45g é classificado como Descarte', () => {
+    throw 'Simulando um erro.'
     expect(classify_egg(30)).toBe('Descarte')
 });
 
