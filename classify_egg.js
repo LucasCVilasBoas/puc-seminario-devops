@@ -7,11 +7,13 @@ function classify_egg(egg_mass) {
     return 'Médio';
   } else if (55 <= egg_mass && egg_mass < 60) {
     return 'Grande';
-  } else if (60 < egg_mass && egg_mass < 65) {
+  } else if (60 <= egg_mass && egg_mass < 65) {
     return 'Extra';
   } else {
     return 'Jumbo'
   }
 };
+
+/// Nova implementação, sem bug.
 
 module.exports = classify_egg;
